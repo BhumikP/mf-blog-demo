@@ -1,0 +1,22 @@
+{
+  "name": "mf-blog-demo",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": {
+    "packages": [
+      "host",
+      "remote"
+    ]
+  },
+  "scripts": {
+    "start": "npm run start:host & npm run start:remote",
+    "start:host": "cd ./host-app && npm start",
+    "start:remote": "cd ./remote-app && npm start",
+    "start:all": "yarn workspaces run start",
+    "cleanup": "yarn workspaces run cleanup"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
